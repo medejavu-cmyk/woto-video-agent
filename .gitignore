@@ -1,0 +1,25 @@
+# Credentials
+.env
+.env.*
+!.env.example
+config/*
+!config/README.md
+*.pem
+*.key
+# User content and generated output, including legacy runtime data
+data/
+**/data/
+models/
+work/
+outputs/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.exe
+*.dll
+*.cjo
+*.zip
+*.mp4
+*.wav
+*.log

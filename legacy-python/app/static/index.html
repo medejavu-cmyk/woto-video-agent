@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>喔图 AI 视频知识库智能体</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="agent-panel">
+        <div class="avatar" id="avatar">
+          <div class="halo"></div>
+          <div class="face">
+            <span class="eye"></span>
+            <span class="eye"></span>
+            <span class="mouth"></span>
+          </div>
+        </div>
+        <div>
+          <p class="kicker">Woto AI Video Agent</p>
+          <h1>喔图 AI 视频内容问答智能体</h1>
+          <p class="intro">
+            我可以把视频字幕、转写文本或 SRT 文件变成本地知识库，回答内容总结、卖点提炼、时间点定位和功能检索问题。
+          </p>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="side">
+          <h2>知识库</h2>
+          <form id="projectForm">
+            <label>
+              标题
+              <input name="title" placeholder="例如：喔图 AI 产品介绍视频" />
+            </label>
+            <label>
+              字幕/转写文件
+              <input name="file" type="file" accept=".txt,.srt,.vtt" />
+            </label>
+            <label>
+              或粘贴文本
+              <textarea name="transcript" rows="8" placeholder="粘贴视频字幕、会议纪要或 ASR 转写文本"></textarea>
+            </label>
+            <button type="submit">建立知识库</button>
+          </form>
+          <div class="projects" id="projects"></div>
+        </aside>
+
+        <section class="chat">
+          <div class="chat-head">
+            <div>
+              <h2>视频问答</h2>
+              <p id="activeProject">请选择或创建一个知识库</p>
+            </div>
+            <span id="status">本地检索就绪</span>
+          </div>
+          <div class="messages" id="messages">
+            <div class="message bot">你好，我是喔图 AI 视频助理。上传字幕后，可以问我“这个视频讲了什么”、“哪里提到价格”、“总结卖点”。</div>
+          </div>
+          <form class="ask-bar" id="askForm">
+            <input id="question" placeholder="输入你想问的视频内容问题" />
+            <button type="submit">提问</button>
+          </form>
+        </section>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
